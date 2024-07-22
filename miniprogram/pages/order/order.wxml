@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header">
+    <image src="../photos/1.png" class="header-image"></image>
+    <view class="profile">
+      <image src="../photos/1.png" class="profile-image"></image>
+      <text class="greeting">Hi, Lynn!</text>
+    </view>
+  </view>
+  
+  <view class="order">
+    <text class="order-title">我的订单</text>
+    <view class="order-detail">
+      <text class="order-item">2024青岛国际啤酒节</text>
+      <text class="order-date">2024.08.03 19:15</text>
+      <text class="order-location">山东省青岛市</text>
+      <text class="order-price">¥ 2150.00 / 共2张</text>
+    </view>
+  </view>
+  
+  <view class="services">
+    <navigator class="service" url="/pages/service1/service1">实名信息</navigator>
+    <navigator class="service" url="/pages/service2/service2">地址</navigator>
+    <navigator class="service" url="/pages/service3/service3">客服</navigator>
+    <navigator class="service" url="/pages/service4/service4">反馈</navigator>
+  </view>
+</view>
