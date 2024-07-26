@@ -1,11 +1,22 @@
+<view class="logo">
+      <text class="content">LYNN's bar</text>
+</view>
+
 <view class="container">
-  <view class="header">
-    <image src="../photos/1.png" class="header-image"></image>
-    <view class="profile">
-      <image src="../photos/1.png" class="profile-image"></image>
-      <text class="greeting">Hi, Lynn!</text>
-    </view>
+  <view class="title-container">
+    <text class="title">CHEERS</text>
   </view>
+  
+  <scroll-view class="profile-container">
+    <view class="profile">
+      <image src="../photos/主页2.jpeg" class="header-image"></image>
+      <text class="subtitle">共享精酿</text>
+    </view>
+    <view class="profile1">
+      <image src="../photos/主页1.jpg" class="header-image"></image>
+      <text class="subtitle">场地美景</text>
+    </view>
+  </scroll-view>
   
   <view class="order">
     <text class="order-title">我的订单</text>
@@ -23,4 +34,5 @@
     <navigator class="service" url="/pages/service3/service3">客服</navigator>
     <navigator class="service" url="/pages/service4/service4">反馈</navigator>
   </view>
+
 </view>
