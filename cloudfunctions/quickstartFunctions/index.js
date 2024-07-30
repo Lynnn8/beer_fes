@@ -4,6 +4,12 @@ cloud.init({ // 初始化云开发环境
 })
 const db = cloud.database()
 const name = 'register' // 该模版的标识
+
+const testDB = wx.cloud.database({
+  env: 'test'
+})
+const feat-list = db.collection('feat-list')
+
 exports.main = async (event, context) => {
   const type = event.type || 'get_project' // 默认的执行方法
   const res = { name }
