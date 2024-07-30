@@ -1,0 +1,56 @@
+<view class="logo">
+      <text class="content">LYNN's bar</text>
+</view>
+
+<view class="container">
+  <view class="title-container">
+    <text class="title">CHEERS</text>
+  </view>
+  
+  <!-- 轮播图 -->
+  <view class="banner-swiper">
+    <swiper indicator-dots="{{indicator}}" autoplay="{{autoplay}}" current='{{swiperCurrent}}' indicator-color="{{beforeColor}}" indicator-active-color="{{afterColor}}" circular='{{circular}}' previous-margin="{{previousmargin}}" next-margin="{{nextmargin}}"
+      bindchange="swiperChange">
+      <block wx:for="{{arr}}" wx:key="key">
+        <swiper-item>
+          <image src="{{item.images}}" class="slide-image {{index == swiperCurrent ? ' active' : ''}}"></image>
+          <view class='goods-info'>{{item.title}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='projects'>
+    <text class='title-content'>人气项目</text>
+    <view class="ticket">
+      <view class="ticket-content">
+        <view class="ticket-info">
+          <text class="ticket-title">普通票（不限人群）</text>
+          <text class="ticket-subtitle">120cm以上</text>
+          <text class="ticket-date">可订7月27日 随时退</text>
+        </view>
+        <view class="ticket-price">
+          <text class="price">¥1080</text>
+          <button class="buy-button">购买</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="ticket">
+      <view class="ticket-content">
+        <view class="ticket-info">
+          <text class="ticket-title">普通票（双人票）</text>
+          <text class="ticket-subtitle">120cm以上</text>
+          <text class="ticket-date">可订7月27日 随时退</text>
+        </view>
+        <view class="ticket-price">
+          <text class="price">¥2150</text>
+          <button class="buy-button">购买</button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>
