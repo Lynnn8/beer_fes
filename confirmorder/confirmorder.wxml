@@ -1,0 +1,43 @@
+<!--pages/confirmorder/confirmorder.wxml-->
+<view class="container">
+  <!--标题区-->
+  <view class="header">
+    <text class="hero">青岛国际啤酒节-普通票</text>
+    <text class="subtitle">青岛·青岛西海岸新区金沙滩啤酒城</text>
+  </view>
+
+  <!--选择票种-->
+  <view class="ticket-container1">
+    <view class="ticket-container">
+      <text class="title">选择日期</text>
+      <view class="choosetime">
+        <button class="Rectangle">{{ticket.time1}}</button>
+        <button class="Rectangle">{{ticket.time2}}</button>
+        <button class="Rectangle">{{ticket.time3}}</button>
+        <button class="Rectangle">{{ticket.time4}}</button>
+      </view>
+
+      <text class="title">不限人群</text>
+      <view class="info">
+        <text class="details1">120cm以上</text>
+        <text class="details2">{{ticket.datelimit}}</text>
+      </view>
+    </view>
+  </view>
+  <!--填写信息-->
+  <view class="info-container">
+    <text class="info-title">购票人</text>
+    <text class="info-details">{{info.name}}</text>
+    <text class="info-title1">身份证号</text>
+    <text class="info-details1">{{info.id}}</text>
+    <text class="info-title2">手机号</text>
+    <text class="info-details2">{{info.phone}}</text>
+  </view>
+
+  <view class="pay-container">
+    <text class="pay-title">应付￥</text>
+    <text class="pay-number">{{pay.number}}</text>
+    <button class="pay-button">立即支付</button>
+  </view>
+
+</view>
