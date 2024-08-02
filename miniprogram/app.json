@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/personal/personal",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/confirmorder/confirmorder"
   ],
   "window": {
     "backgroundTextStyle": "light",

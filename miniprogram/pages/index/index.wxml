@@ -13,7 +13,7 @@
       bindchange="swiperChange">
       <block wx:for="{{arr}}" wx:key="key">
         <swiper-item>
-          <image src="{{item.images}}" class="slide-image {{index == swiperCurrent ? ' active' : ''}}"></image>
+          <image src="{{item.images}}" class="slide-image"></image>
           <view class='goods-info'>{{item.title}}</view>
         </swiper-item>
       </block>
@@ -31,7 +31,7 @@
         </view>
         <view class="ticket-price">
           <text class="price">¥1080</text>
-          <button class="buy-button">购买</button>
+          <button class="buy-button" bindtap="goToConfirmOrder">购买</button>
         </view>
       </view>
     </view>

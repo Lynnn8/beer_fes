@@ -58,5 +58,11 @@ Page({
     wx.navigateTo({
       url: '/pages/customerService/customerService'
     });
+  },
+  goToConfirmOrder: function() {
+    //跳转到确认订单页面的逻辑
+    wx.navigateTo({
+      url: '/pages/confirmorder/confirmorder'
+    })
   }
 });
