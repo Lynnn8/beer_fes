@@ -1,13 +1,5 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/personal/personal"
-  ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "WeChat",
-    "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light"
+    "navigationBarTitleText": "页面标题"
   }
 }

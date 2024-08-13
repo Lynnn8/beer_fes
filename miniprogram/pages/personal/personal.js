@@ -1,9 +1,45 @@
+const db = wx.cloud.database();
+
 Page({
   data: {
     user: {
       avatarUrl: '../photos/image.png'
     },
-    showModal: false
+    showModal: false,
+    order: null, // Check if order exists
+    items: [] // Store fetched items
+  },
+  onLoad() {
+    const that = this;
+    wx.cloud.database().collection("fest-list").where({
+      price: '2150'
+    }).get({
+      success(res) {
+        if (res.data.length > 0) {
+          that.setData({
+            order: res.data[0],
+            items: res.data
+          });
+        } else {
+          that.setData({
+            order: null
+          });
+        }
+      },
+      fail(err) {
+        console.error('请求失败', err);
+      }
+    });
+  },
+  getmessage() {
+    db.get({
+      success: function(res) {
+        console.log(res);
+      },
+      fail: function(err) {
+        console.error(err);
+      }
+    })
   },
   onAvatarTap: function(event) {
     this.setData({ showModal: true });
@@ -31,32 +67,5 @@ Page({
   onCancel: function(event) {
     console.log('取消更换头像');
     this.setData({ showModal: false });
-  },
-
-  
-  getOrderDetails: function() {
-    const that = this;
-    wx.request({
-      url: 'http://localhost:3000', // 替换为你的后端 API 地址
-      method: 'GET',
-      success: function(res) {
-        if (res.statusCode === 200) {
-          that.setData({
-            order: res.data
-          });
-        } else {
-          wx.showToast({
-            title: '获取订单信息失败',
-            icon: 'none'
-          });
-        }
-      },
-      fail: function() {
-        wx.showToast({
-          title: '请求失败，请稍后再试',
-          icon: 'none'
-        });
-      }
-    });
   }
 });

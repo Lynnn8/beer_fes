@@ -4,9 +4,11 @@ App({
 		wx.cloud.init()
     this.initcloud()
   },
-  /**
-   * 初始化云开发环境（支持环境共享和正常两种模式）
-   */
+  onLaunch: function(options) {
+    wx.cloud.init({
+      env:"beer-fes-6gq0rvcq04b1e39f"
+    })
+  },
   async initcloud () {
     const shareinfo = wx.getExtConfigSync() // 检查 ext 配置文件
     const normalinfo = require('./envList.js').envList || [] // 读取 envlist 文件

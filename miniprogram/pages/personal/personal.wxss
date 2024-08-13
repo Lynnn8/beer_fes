@@ -37,25 +37,27 @@
   font-weight: 700;
 }
 
-
-
-.order {
-  width: 100%;
-  background-color: white;
-  border-radius: 8px;
-  margin-top: 40px;
-  padding: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加阴影效果 */
-}
-
 .order-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: black;
+  padding: 0 50px 0;
+  display: inline-block;
+  line-height: 80px;
 }
 
-.order-detail {
-  margin-top: 10px;
+.order, .no-order {
+  width: 300px;
+  height: 130px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  font-size:20px;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  display: flex;        
+  justify-content: center; 
 }
 
 .order-item,
@@ -74,25 +76,32 @@
 }
 
 .services {
-  width: 100%;
+  width: 350px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: white;
+  justify-content: space-around;
   border-radius: 8px;
+  padding: 0; /* 去掉内边距 */
+  background-color: transparent;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加阴影效果 */
 }
 
 .service {
-  width: 23%;
-  padding: 10px;
+  display: flex;
+  flex-direction: column; /* 子元素垂直排列 */
+  border: none;
+  align-items: center; 
+  width: 30%;
+  padding: 2px;
   text-align: center;
   border-radius: 8px;
   font-size: 14px;
-  color: black;
-  background-color: #f5f5f5; /* 服务项背景色 */
-  border: 1px solid #ddd; /* 添加边框 */
+  color: #333;
+  background-color: #fafafa; /* 服务项背景色 */
+}
+.service-icon {
+  width: 50px; /* 图标宽度 */
+  height: 50px; /* 图标高度 */
+  margin-bottom: 1px; /* 图标和文本之间的间距 */
 }
 
 
@@ -139,6 +148,58 @@
   background-color: #FFE4C4; /* 鼠标悬停时的背景颜色 */
 }
 
+.order-detail {
+  display: flex;
+  padding-top:80px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 订单项文本样式 */
+.order-item,
+.order-date,
+.order-location {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333333;
+}
+
+/* 订单日期文本样式 */
+.order-date {
+  font-weight: bold;
+}
+
+/* 订单地点文本样式 */
+.order-location {
+  font-size: 14px;
+  color: #666666;
+}
+
+/* 订单价格文本样式 */
+.order-price {
+  font-weight: bold;
+  color: black;
+  font-size: 25px;
+}
+
+/* 订单图片样式 */
+.order-image {
+  width: 30px; /* 或者其他您希望的尺寸 */
+  height: 30px; /* 保持图片比例 */
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* 媒体查询：适应小屏幕设备 */
+@media (max-width: 768px) {
+  .order {
+    padding: 10px;
+  }
+  .order-image {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 @media (max-width: 400px) {
   .modal {

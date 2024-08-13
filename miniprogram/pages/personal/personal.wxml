@@ -1,4 +1,4 @@
-<view class="container">
+
     <view class="header">
         <image src="../photos/1.png" class="header-image"></image>
         <view class="avatar-wrapper" bindtap="onAvatarTap">
@@ -6,27 +6,53 @@
         </view>
         <view class="greeting">Hi, Lynn!</view>
     </view>
-  </view>
-    <!-- 订单信息 -->
-    <view class="order">
-    <text class="order-title">我的订单</text>
-    <view class="order-detail">
-      <text class="order-item">{{order.eventName}}</text>
-      <text class="order-date">{{order.date}}</text>
-      <text class="order-location">{{order.location}}</text>
-      <text class="order-price">¥ {{order.price}} / 共{{order.ticketCount}}张</text>
-      <image src="{{order.image}}" class="order-image"></image>
+<text class="order-title">我的订单</text>
+    <!-- Check if the user has orders -->
+  <view class="container">
+    <view wx:if="{{order}}">
+        <!-- Order Info -->
+        <view class="order">
+            <view class="order-detail" bindtap="getmessage">
+                    <text class="order-item">{{order.eventName}}</text>
+                    <text class="order-date">{{order.date}}</text>
+                    <text class="order-location">{{order.location}}</text>
+                    <text class="order-price">¥ {{order.price}} / 共{{order.number}}张</text>
+                    <image src="../photos/青岛国际啤酒节.png" class="order-image" wx:if="{{order}}"></image>
+            </view>
+        </view>
+    </view>
+    <!-- If no order, show default interface -->
+    <view wx:else>
+        <view class="no-order">
+            <text>还没有订单信息噢，赶快下单吧！</text>
+        </view>
+    </view>
+</view>
+<text class="order-title">更多服务</text>
+    <!-- More Services -->
+    <view class="container">
+      <view class="services">
+        <navigator class="service" url="/pages/service1/service1">
+          <image src="../photos/实名信息.png" mode="aspectFit" class="service-icon"></image>
+          <text>实名信息</text>
+        </navigator>
+        <navigator class="service" url="/pages/service1/service1">
+          <image src="../photos/地址.png" mode="aspectFit" class="service-icon"></image>
+          <text>地址</text>
+        </navigator>
+        <navigator class="service" url="/pages/service1/service1">
+          <image src="../photos/客服.png" mode="aspectFit" class="service-icon"></image>
+          <text>客服</text>
+        </navigator>
+        <navigator class="service" url="/pages/service1/service1">
+          <image src="../photos/反馈.png" mode="aspectFit" class="service-icon"></image>
+          <text>反馈</text>
+        </navigator>
+    </view>
     </view>
 
-    <!-- 更多服务 -->
-    <view class="services">
-        <navigator class="service" url="/pages/service1/service1">实名信息</navigator>
-        <navigator class="service" url="/pages/service2/service2">地址</navigator>
-        <navigator class="service" url="/pages/service3/service3">客服</navigator>
-        <navigator class="service" url="/pages/service4/service4">反馈</navigator>
-    </view>
 
-    <!-- 弹窗模态层 -->
+    <!-- Modal Overlay -->
     <view class="overlay" hidden="{{!showModal}}" bindtap="onOverlayTap">
         <view class="modal">
             <text>是否更换头像？</text>
@@ -36,4 +62,4 @@
             </view>
         </view>
     </view>
-</view>
+
