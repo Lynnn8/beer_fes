@@ -1,38 +1,42 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/personal/personal",
-    "pages/order/order",
-    "pages/confirmorder/confirmorder"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": { 
-    "color": "#7A7E83",
-    "selectedColor": "#7f7f7f", 
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "./pages/photos/home.png",
-      "selectedIconPath": "./pages/photos/home_selected.png",
-      "text": "主页"
-    }, {
-      "pagePath": "pages/order/order",
-      "iconPath": "./pages/photos/ticket.png",
-      "selectedIconPath": "./pages/photos/ticket_selected.png",
-      "text": "购票"
-    }, {
-      "pagePath": "pages/personal/personal",
-      "iconPath": "./pages/photos/person.png",
-      "selectedIconPath": "./pages/photos/person_selected.png",
-      "text": "我的"
-    }]
-  },
-  "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
-  },
-  "debug": true
+	"pages": [
+		"pages/index/index",
+		"pages/personal/personal",
+		"pages/order/order",
+		"pages/confirmorder/confirmorder"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#7f7f7f",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "./pages/photos/home.png",
+				"selectedIconPath": "./pages/photos/home_selected.png",
+				"text": "主页"
+			},
+			{
+				"pagePath": "pages/order/order",
+				"iconPath": "./pages/photos/ticket.png",
+				"selectedIconPath": "./pages/photos/ticket_selected.png",
+				"text": "购票"
+			},
+			{
+				"pagePath": "pages/personal/personal",
+				"iconPath": "./pages/photos/person.png",
+				"selectedIconPath": "./pages/photos/person_selected.png",
+				"text": "我的"
+			}
+		]
+	},
+	"networkTimeout": {
+		"request": 10000,
+		"downloadFile": 10000
+	},
+	"debug": true
 }

@@ -18,7 +18,8 @@ Page({
         if (res.data.length > 0) {
           that.setData({
             order: res.data[0],
-            items: res.data
+            items: res.data,
+            orderImage: res.data[0].image
           });
         } else {
           that.setData({

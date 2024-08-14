@@ -17,8 +17,8 @@
                     <text class="order-date">{{order.date}}</text>
                     <text class="order-location">{{order.location}}</text>
                     <text class="order-price">¥ {{order.price}} / 共{{order.number}}张</text>
-                    <image src="../photos/青岛国际啤酒节.png" class="order-image" wx:if="{{order}}"></image>
             </view>
+                    <image src="{{order.orderImage}}" class="order-image" wx:if="{{order}}"></image>
         </view>
     </view>
     <!-- If no order, show default interface -->
