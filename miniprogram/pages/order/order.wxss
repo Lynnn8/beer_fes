@@ -1,79 +1,98 @@
+/* pages/order/order.wxss */
 .container {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 
 .header {
-  width: 100%;
-  position: relative;
+   width: 100%;
+   flex-direction: row;
+   height: 140px;
+   padding-top: 30px;
+   background-image: linear-gradient(
+    rgba(248, 215, 171, 1),  
+    rgba(242, 217, 184, 0)
+  );
 }
-
-.header-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.profile {
-  position: absolute;
-  top: 160px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.profile-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.greeting {
-  color: white;
-  font-size: 18px;
-  margin-left: 10px;
-}
-
-.order {
-  width: 100%;
-  background-color: white;
-  border-radius: 8px;
-  margin-top: 20px;
-  padding: 15px;
-}
-
-.order-title {
-  font-size: 16px;
+.event-info {
+  padding-left: 50px;
+  font-size: 24px;
   font-weight: bold;
 }
-
-.order-detail {
-  margin-top: 10px;
+.location-container {
+  display: flex;
+  align-items: center; 
+  padding-left: 50px; 
+  margin-top: 22px;
+}
+.star-icon {
+  width: 30px; 
+  height: 30px; 
+  margin-right: 8px; 
+}
+.location-text {
+  font-size: 16px; 
+  line-height: 1.5; 
 }
 
-.order-item,
-.order-date,
-.order-location,
-.order-price {
-  margin-top: 5px;
-  font-size: 14px;
+.beer-image-container {
+  width: 100px; 
+}
+.beer-image {
+  width: 100%; 
+  height: auto; 
 }
 
-.services {
+
+
+.projects {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  height: 380px;
+  justify-content: flex-start;
+  flex-direction:column;
+  margin-left: 0;
+  background-color: rgb(250, 250, 250) ;
 }
 
-.service {
-  width: 23%;
-  padding: 10px;
-  background-color: white;
-  text-align: center;
-  border-radius: 8px;
-  font-size: 14px;
+.title-content {
+  font-weight: 500;
+  color: rgb(73, 73, 73);
+  font-size: 16px;
+  padding-top: 10px;
+  width: 100px;
+  height: 20px;
+}
+
+/* 蒙版不会做nmd */
+
+/* 票 */
+.ticket {
+  position: relative;
+  background-color: #fff;
+  margin-top: 24px;
+  overflow: hidden;
+  margin-right: 32px;
+}
+
+.ticket::before,
+.ticket::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.ticket::before {
+  left: -16px;
+}
+
+.ticket::after {
+  right: -16px;
 }

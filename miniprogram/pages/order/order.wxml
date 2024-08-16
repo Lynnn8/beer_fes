@@ -1,26 +1,45 @@
 <view class="container">
   <view class="header">
-    <image src="../photos/1.png" class="header-image"></image>
-    <view class="profile">
-      <image src="../photos/1.png" class="profile-image"></image>
-      <text class="greeting">Hi, Lynn!</text>
+    <view class="event-info">
+      <text>青岛国际啤酒节</text>
+    </view>
+    <view class="location-container">
+      <image class="star-icon" src="../photos/star.png"></image>
+      <text class="location-text">青岛西海岸新区金沙滩啤酒城</text>
+    </view>
+    <view class="beer-image-container">
+      <image src="../photos/beer_s.png" mode="aspectFit" class="beer-image"></image>
     </view>
   </view>
-  
-  <view class="order">
-    <text class="order-title">我的订单</text>
-    <view class="order-detail">
-      <text class="order-item">2024青岛国际啤酒节</text>
-      <text class="order-date">2024.08.03 19:15</text>
-      <text class="order-location">山东省青岛市</text>
-      <text class="order-price">¥ 2150.00 / 共2张</text>
+
+  <view class='projects'>
+      <text class='title-content'>人气项目</text>
+      <view class="ticket">
+        <view class="ticket-content">
+          <view class="ticket-info">
+            <text class="ticket-title">普通票（不限人群）</text>
+            <text class="ticket-subtitle">120cm以上</text>
+            <text class="ticket-date">可订7月27日 随时退</text>
+          </view>
+          <view class="ticket-price">
+            <text class="price">¥1080</text>
+            <button class="buy-button" bindtap="goToConfirmOrder">购买</button>
+          </view>
+        </view>
+      </view>
+
+    <view class="ticket">
+      <view class="ticket-content">
+        <view class="ticket-info">
+          <text class="ticket-title">普通票（双人票）</text>
+          <text class="ticket-subtitle">120cm以上</text>
+          <text class="ticket-date">可订7月27日 随时退</text>
+        </view>
+        <view class="ticket-price">
+          <text class="price">¥2150</text>
+          <button class="buy-button">购买</button>
+        </view>
+      </view>
     </view>
-  </view>
-  
-  <view class="services">
-    <navigator class="service" url="/pages/service1/service1">实名信息</navigator>
-    <navigator class="service" url="/pages/service2/service2">地址</navigator>
-    <navigator class="service" url="/pages/service3/service3">客服</navigator>
-    <navigator class="service" url="/pages/service4/service4">反馈</navigator>
-  </view>
+    </view>
 </view>
